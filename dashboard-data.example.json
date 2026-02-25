@@ -1,0 +1,18 @@
+{
+  "goals": [],
+  "todos": [],
+  "journal": [],
+  "settings": {
+    "weatherCity": "Vienna"
+  },
+  "finance": {
+    "expenses": [],
+    "budget": 2000,
+    "savings": {
+      "goalAmount": 5000,
+      "targetDate": "",
+      "currentAmount": 0,
+      "monthlyContribution": 250
+    }
+  }
+}
