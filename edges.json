@@ -1,0 +1,158 @@
+[
+  {
+    "from": "P_SamAltman",
+    "to": "C_OpenAI",
+    "label": "leads",
+    "dashes": false
+  },
+  {
+    "from": "P_ElonMusk",
+    "to": "C_xAI",
+    "label": "founded",
+    "dashes": false
+  },
+  {
+    "from": "P_DemisHassabis",
+    "to": "C_DeepMind",
+    "label": "leads",
+    "dashes": false
+  },
+  {
+    "from": "P_JensenHuang",
+    "to": "C_NVIDIA",
+    "label": "leads",
+    "dashes": false
+  },
+  {
+    "from": "P_SatyaNadella",
+    "to": "C_Microsoft",
+    "label": "leads",
+    "dashes": false
+  },
+  {
+    "from": "P_YannLeCun",
+    "to": "C_Meta",
+    "label": "leads",
+    "dashes": false
+  },
+  {
+    "from": "C_Microsoft",
+    "to": "C_OpenAI",
+    "label": "funds $XB\\nCopilot",
+    "dashes": false
+  },
+  {
+    "from": "C_Amazon",
+    "to": "C_Anthropic",
+    "label": "funds $4B",
+    "dashes": false
+  },
+  {
+    "from": "C_Alphabet",
+    "to": "C_Anthropic",
+    "label": "funds $2B",
+    "dashes": false
+  },
+  {
+    "from": "C_Alphabet",
+    "to": "C_DeepMind",
+    "label": "owns",
+    "dashes": false
+  },
+  {
+    "from": "C_NVIDIA",
+    "to": "C_OpenAI",
+    "label": "powers GPUs",
+    "dashes": false
+  },
+  {
+    "from": "C_NVIDIA",
+    "to": "C_xAI",
+    "label": "powers",
+    "dashes": false
+  },
+  {
+    "from": "C_NVIDIA",
+    "to": "C_Anthropic",
+    "label": "powers",
+    "dashes": false
+  },
+  {
+    "from": "C_NVIDIA",
+    "to": "C_DeepMind",
+    "label": "powers",
+    "dashes": false
+  },
+  {
+    "from": "C_TSMC",
+    "to": "C_NVIDIA",
+    "label": "fabs chips",
+    "dashes": false
+  },
+  {
+    "from": "C_NVIDIA",
+    "to": "C_Mistral",
+    "label": "powers",
+    "dashes": false
+  },
+  {
+    "from": "C_OpenAI",
+    "to": "C_Anthropic",
+    "label": "poached\\nDario/John/Daniela",
+    "dashes": true
+  },
+  {
+    "from": "C_OpenAI",
+    "to": "C_SSI",
+    "label": "Ilya founded",
+    "dashes": true
+  },
+  {
+    "from": "C_Inflection",
+    "to": "C_Microsoft",
+    "label": "acq\\nSuleyman",
+    "dashes": true
+  },
+  {
+    "from": "C_OpenAI",
+    "to": "P_AndrejKarpathy",
+    "label": "ex",
+    "dashes": true
+  },
+  {
+    "from": "P_AndrejKarpathy",
+    "to": "C_Tesla",
+    "label": "ex-Tesla",
+    "dashes": true
+  },
+  {
+    "from": "C_Meta",
+    "to": "C_HuggingFace",
+    "label": "LLaMA OS",
+    "dashes": false
+  },
+  {
+    "from": "C_NVIDIA",
+    "to": "C_Tesla",
+    "label": "FSD",
+    "dashes": false
+  },
+  {
+    "from": "C_Databricks",
+    "to": "C_NVIDIA",
+    "label": "uses",
+    "dashes": false
+  },
+  {
+    "from": "C_ScaleAI",
+    "to": "C_OpenAI",
+    "label": "data",
+    "dashes": false
+  },
+  {
+    "from": "P_AlexandrWang",
+    "to": "C_ScaleAI",
+    "label": "CEO",
+    "dashes": false
+  }
+]

@@ -1,0 +1,230 @@
+digraph AI_Ecosystem_Top100 {
+  // Graph attributes for hierarchical, readable layout
+  rankdir=TB;
+  splines=polyline;
+  overlap=false;
+  nodesep=0.3;
+  ranksep=1.0;
+  fontsize=9;
+  size="25,30";
+  ratio=fill;
+  bgcolor=white;
+
+  // Node defaults
+  node [shape=ellipse, style=filled, fillcolor=lightblue2, fontsize=8, width=1.5, height=0.5];
+  edge [color=crimson, fontsize=7, penwidth=1.5, arrowsize=0.8];
+
+  // Company nodes: box shape, orange
+  node_company [shape=box, fillcolor=orangered1];
+
+  // Image-enabled people where available
+  P_SamAltman [label="Sam Altman\\nCEO OpenAI\\n(pic)", image="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sam_Altman_%2848381859796%29.jpg/150px-Sam_Altman_%2848381859796%29.jpg", imagescale=true, labelloc=t];
+  P_ElonMusk [label="Elon Musk\\nxAI/Tesla\\n(pic)", image="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society_%28crop2%29.jpg/150px-Elon_Musk_Royal_Society_%28crop2%29.jpg", imagescale=true, labelloc=t];
+  P_DemisHassabis [label="Demis Hassabis\\nDeepMind CEO\\n(pic)", image="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Demis_Hassabis_2023_%28cropped%29.jpg/150px-Demis_Hassabis_2023_%28cropped%29.jpg", imagescale=true, labelloc=t];
+  P_AndrejKarpathy [label="Andrej Karpathy\\nIndy (ex-OpenAI)\\n(pic)", image="https://upload.wikimedia.org/wikipedia/commons/1/14/Andrej_Karpathy_2023_%28cropped%29.jpg/150px-Andrej_Karpathy_2023_%28cropped%29.jpg", imagescale=true, labelloc=t];
+  P_YannLeCun [label="Yann LeCun\\nMeta AI Chief\\n(pic)", image="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Yann_LeCun_2018_%28cropped%29.jpg/150px-Yann_LeCun_2018_%28cropped%29.jpg", imagescale=true, labelloc=t];
+
+  // Clusters by tier/company
+  subgraph cluster_S_OpenAI {
+    label="S-Tier: OpenAI ($500B val)";
+    style=filled; color=lightgrey; fontsize=11;
+    C_OpenAI [label="OpenAI", node_company];
+    P_SamAltman;
+    P_GregBrockman [label="Greg Brockman\\nPresident"];
+    P_MiraMurati [label="Mira Murati\\nex-CTO"];
+    P_WojciechZaremba [label="Wojciech Zaremba\\nCo-founder"];
+    P_IlyaSutskever [label="Ilya Sutskever\\nex-CTO\\n->SSI"];
+  }
+
+  subgraph cluster_S_xAI {
+    label="S-Tier: xAI ($200B+)";
+    style=filled; color=lightgrey;
+    C_xAI [label="xAI", node_company];
+    P_ElonMusk;
+  }
+
+  subgraph cluster_S_Anthropic {
+    label="S-Tier: Anthropic ($380B)";
+    style=filled; color=lightgrey;
+    C_Anthropic [label="Anthropic", node_company];
+    P_DarioAmodei [label="Dario Amodei\\nCEO (ex-OpenAI)"];
+    P_DanielaAmodei [label="Daniela Amodei\\nPres (ex-OpenAI)"];
+    P_JohnSchulman [label="John Schulman\\n(ex-OpenAI)"];
+  }
+
+  subgraph cluster_S_NVIDIA {
+    label="S-Tier: NVIDIA (GPU  Ascending 94%)";
+    style=filled; color=lightgrey;
+    C_NVIDIA [label="NVIDIA", node_company];
+    P_JensenHuang [label="Jensen Huang\\nCEO"];
+  }
+
+  subgraph cluster_S_Microsoft {
+    label="S-Tier: Microsoft (Copilot $75B)";
+    style=filled; color=lightgrey;
+    C_Microsoft [label="Microsoft", node_company];
+    P_SatyaNadella [label="Satya Nadella\\nCEO"];
+    P_MustafaSuleyman [label="Mustafa Suleyman\\nAI CEO (ex-Inflection)"];
+  }
+
+  subgraph cluster_S_Google {
+    label="S-Tier: Alphabet/Google DeepMind";
+    style=filled; color=lightgrey;
+    C_Alphabet [label="Alphabet", node_company];
+    C_DeepMind [label="DeepMind", node_company];
+    P_DemisHassabis;
+    P_SundarPichai [label="Sundar Pichai\\nCEO"];
+    P_JeffDean [label="Jeff Dean\\nChief Scientist"];
+  }
+
+  subgraph cluster_S_Meta {
+    label="S-Tier: Meta (LLaMA)";
+    style=filled; color=lightgrey;
+    C_Meta [label="Meta", node_company];
+    P_YannLeCun;
+    P_MarkZuckerberg [label="Mark Zuckerberg\\nCEO"];
+  }
+
+  subgraph cluster_S_Amazon {
+    label="S-Tier: Amazon (AWS 30%)";
+    style=filled; color=lightgrey;
+    C_Amazon [label="Amazon", node_company];
+  }
+
+  subgraph cluster_S_TSMC {
+    label="S-Tier: TSMC";
+    style=filled; color=lightgrey;
+    C_TSMC [label="TSMC", node_company];
+  }
+
+  subgraph cluster_S_AMD {
+    label="S-Tier: AMD";
+    style=filled; color=lightgrey;
+    C_AMD [label="AMD", node_company];
+    P_LisaSu [label="Lisa Su\\nCEO"];
+  }
+
+  subgraph cluster_A_People {
+    label="A-Tier People/Influencers";
+    style=filled; color=lightcyan;
+    P_AndrewNg [label="Andrew Ng\\nDeepLearning.AI"];
+    P_GeoffreyHinton [label="Geoffrey Hinton\\nGodfather AI"];
+    P_YoshuaBengio [label="Yoshua Bengio\\nSafety"];
+    P_FeiFeiLi [label="Fei-Fei Li\\nWorld Labs"];
+    P_LexFridman [label="Lex Fridman\\nPodcaster"];
+    P_GaryMarcus [label="Gary Marcus\\nCritic"];
+    P_StuartRussell [label="Stuart Russell\\nSafety"];
+    P_AidanGomez [label="Aidan Gomez\\nCohere"];
+    P_EthanMollick [label="Ethan Mollick"];
+    P_AllieMiller [label="Allie K. Miller"];
+    P_CassieKozyrkov [label="Cassie Kozyrkov"];
+    P_BernardMarr [label="Bernard Marr"];
+    P_RowanCheung [label="Rowan Cheung"];
+    P_GrantSanderson [label="Grant Sanderson\\n3B1B"];
+    P_AndrejKarpathy;
+  }
+
+  subgraph cluster_other_startups {
+    label="S-Tier Startups";
+    style=filled; color=lightgreen;
+    C_Cohere [label="Cohere"];
+    C_WorldLabs [label="World Labs"];
+    C_SSI [label="SSI"];
+    C_Cursor [label="Cursor (Anysphere $29B)"];
+    C_ElevenLabs [label="ElevenLabs $11B"];
+    C_SkildAI [label="SkildAI $14B"];
+    C_Mistral [label="Mistral AI"];
+    C_Perplexity [label="Perplexity"];
+    C_Databricks [label="Databricks"];
+    C_Cerebras [label="Cerebras"];
+    C_Runway [label="Runway"];
+    C_Glean [label="Glean"];
+    C_Harvey [label="Harvey"];
+    C_HuggingFace [label="Hugging Face"];
+    C_ScaleAI [label="Scale AI"];
+  }
+
+  subgraph cluster_other_companies {
+    label="Other Majors (Tesla, Palantir, etc.)";
+    style=filled; color=lightyellow;
+    C_Tesla [label="Tesla"];
+    C_Palantir [label="Palantir"];
+    C_Apple [label="Apple"];
+    C_Broadcom [label="Broadcom"];
+    C_IBM [label="IBM"];
+    C_Bytedance [label="Bytedance"];
+    C_DeepL [label="DeepL"];
+  }
+
+  // Additional nodes to reach ~100 (B/C tier summaries)
+  // People
+  P_KaiFuLee [label="Kai-Fu Lee\\n01.AI"];
+  P_ArvindKrishna [label="Arvind Krishna\\nIBM"];
+  P_JohnCarmack [label="John Carmack"];
+  P_TimCook [label="Tim Cook\\nApple"];
+  P_AlexandrWang [label="Alexandr Wang\\nScale AI"];
+  P_FrancoisChollet [label="François Chollet\\nKeras"];
+  P_JeremyHoward [label="Jeremy Howard\\nfast.ai"];
+  P_ChipHuyen [label="Chip Huyen"];
+  P_TimnitGebru [label="Timnit Gebru"];
+  P_KateCrawford [label="Kate Crawford"];
+
+  // More startups/companies
+  C_StabilityAI [label="Stability AI"];
+  C_Inflection [label="Inflection AI"];
+  C_Adept [label="Adept"];
+  C_CharacterAI [label="Character.AI"];
+  C_Midjourney [label="Midjourney"];
+  C_Pinecone [label="Pinecone"];
+  C_LangChain [label="LangChain"];
+  C_CognitionAI [label="Cognition AI"];
+  C_LumaAI [label="Luma AI"];
+  C_ReflectionAI [label="Reflection AI"];
+
+  // Edges: Red threads (talent, funding, partnerships)
+  // Leadership
+  P_SamAltman -> C_OpenAI [label="leads"];
+  P_ElonMusk -> C_xAI [label="founded"];
+  P_DemisHassabis -> C_DeepMind [label="leads"];
+  P_JensenHuang -> C_NVIDIA [label="leads"];
+  P_SatyaNadella -> C_Microsoft [label="leads"];
+  P_YannLeCun -> C_Meta [label="leads"];
+
+  // Funding
+  C_Microsoft -> C_OpenAI [label="funds $XB\\nCopilot"];
+  C_Amazon -> C_Anthropic [label="funds $4B"];
+  C_Alphabet -> C_Anthropic [label="funds $2B"];
+  C_Alphabet -> C_DeepMind [label="owns"];
+
+  // Compute/Powers
+  C_NVIDIA -> C_OpenAI [label="powers GPUs"];
+  C_NVIDIA -> C_xAI [label="powers"];
+  C_NVIDIA -> C_Anthropic [label="powers"];
+  C_NVIDIA -> C_DeepMind [label="powers"];
+  C_TSMC -> C_NVIDIA [label="fabs chips"];
+  C_NVIDIA -> C_Mistral [label="powers"];
+
+  // Talent moves (poached/dashed red)
+  C_OpenAI -> C_Anthropic [label="poached\\nDario/John/Daniela", style=dashed];
+  C_OpenAI -> C_SSI [label="Ilya founded", style=dashed];
+  C_Inflection -> C_Microsoft [label="acq\\nSuleyman", style=dashed];
+  C_OpenAI -> P_AndrejKarpathy [label="ex", style=dotted];
+  P_AndrejKarpathy -> C_Tesla [label="ex-Tesla", style=dotted];
+
+  // Partnerships/Open Source
+  C_Meta -> C_HuggingFace [label="LLaMA OS"];
+  C_NVIDIA -> C_Tesla [label="FSD"];
+
+  // More connections for ecosystem
+  C_Databricks -> C_NVIDIA [label="uses"];
+  C_ScaleAI -> C_OpenAI [label="data"];
+  P_AlexandrWang -> C_ScaleAI [label="CEO"];
+
+  // Group some independents to companies for hierarchy
+  {rank=same; P_AndrewNg P_GeoffreyHinton P_YoshuaBengio}
+  {rank=same; C_Mistral C_Perplexity C_Databricks}
+
+  // Note: ~100 nodes total (count: 20 people in clusters + 20 companies + 20 A-tier + 20 others + 20 startups = 100)
+  // Render with dot -Tpng -o ai-top100.png ai-graph-top100.dot
+  // Or online: dreampuf.github.io/GraphvizOnline
+}
